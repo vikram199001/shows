@@ -60,4 +60,18 @@ export default {
     font-style: oblique;
     color: #979797;
 }
+@media (max-width: 480px){
+    .show-row-grid {
+        padding: 8px;
+    padding-bottom: 15px;
+    display: grid;
+    gap: 40px;
+    align-items: stretch;
+    justify-items: stretch;
+    width: 100%;
+    overflow-x: hidden;
+    grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
 </style>

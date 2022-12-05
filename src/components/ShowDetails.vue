@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-if="!showDetails">loading</div>
-        <div v-else class="container-fluid w-75 mt-5">
+        <div v-else class="container-fluid mt-5">
             <b-card  :v-if="showDetails" :img-src="showDetails.image.original" img-alt="Card image" img-left class="mb-3 show-img">
                 <div class="text-left">
                     <h1>{{showDetails.name}}</h1>
@@ -56,10 +56,16 @@
     text-align: left;
   }
   .show-img {
-    height: 75vh;
+    height: max-content;
+    max-height: 95vh;
     width: 100%;
     background: #ededed;
     border: 1px solid grey;
+  }
+  @media (max-width: 480px) {
+.show-img{
+    display: block;
+}
   }
   </style>
   
